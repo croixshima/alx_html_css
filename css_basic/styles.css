@@ -79,3 +79,24 @@ th, td {
 h1, h2, h3 {
     margin: 10px 0;
 }
+/* Responsive adjustments for smartphones */
+@media (max-width: 800px) {
+    body.works_on_smartphone {
+        display: block; /* Stacks everything vertically */
+    }
+
+    body.works_on_smartphone main {
+        display: block; /* Article and aside stack vertically */
+    }
+
+    article, aside {
+        flex: none; /* Remove the 2/3 - 1/3 split */
+        width: 100%; /* Full width for each */
+        overflow-y: visible; /* Scroll handled naturally */
+    }
+
+    header ul {
+        flex-direction: column; /* Stack navigation links */
+        gap: 5px;
+    }
+}
